@@ -1,0 +1,7 @@
+{
+  "name": "webc-unisub",
+  "private": true,
+  "scripts": {
+    "build": "node build.mjs"
+  }
+}
