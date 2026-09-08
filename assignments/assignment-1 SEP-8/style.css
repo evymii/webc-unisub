@@ -45,7 +45,6 @@ h1 {
   letter-spacing: -0.03em;
 }
 
-/* the white card around the sheet, scrolls sideways on small screens */
 .sheet {
   background: #fff;
   border: 1px solid var(--border);
@@ -55,7 +54,6 @@ h1 {
   overflow-x: auto;
 }
 
-/* every row is one grid: 3 fixed columns + 30 period columns */
 .row {
   display: grid;
   grid-template-columns: 42px 70px 118px repeat(30, 1fr);
@@ -77,7 +75,6 @@ h1 {
   font-size: 11px;
 }
 
-/* header: day names take 6 columns */
 .day {
   grid-column: span 6;
   min-height: 38px;
@@ -86,14 +83,12 @@ h1 {
   font-weight: bold;
 }
 
-/* header: the small 1-6 period numbers */
 .p {
   min-height: 26px;
   background: var(--soft);
   font-size: 12px;
 }
 
-/* header: № Код Багшийн нэр take 2 rows */
 .big {
   grid-row: span 2;
   background: var(--soft);
@@ -101,7 +96,6 @@ h1 {
   font-weight: bold;
 }
 
-/* left 3 columns stay visible when scrolling sideways */
 .num {
   position: sticky;
   left: 0;
@@ -127,7 +121,6 @@ h1 {
   padding-left: 8px;
 }
 
-/* tuesday and thursday columns are gray */
 .tue,
 .thu {
   background: #f0f2f1;
