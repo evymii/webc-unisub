@@ -3,309 +3,909 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SEMINAR 1</title>
-    <style>
-      :root {
-        --bg: #edf3f0;
-        --panel: #ffffff;
-        --border: #c9d4ce;
-        --header: #e1e8e4;
-        --soft: #f1f4f2;
-        --text: #14231f;
-        --muted: #64766d;
-        --accent: #35715e;
-      }
-
-      * {
-        box-sizing: border-box;
-      }
-
-      body {
-        margin: 0;
-        font-family: Arial, Helvetica, sans-serif;
-        background: var(--bg);
-        color: var(--text);
-      }
-
-      .page {
-        width: min(100%, 1880px);
-        margin: 0 auto;
-        padding: 2.25rem 1.25rem 3rem;
-      }
-
-      .page-header {
-        max-width: 1780px;
-        margin: 0 auto 1.25rem;
-      }
-
-      .eyebrow {
-        color: #4f7567;
-        font-size: 0.72rem;
-        font-weight: 700;
-        letter-spacing: 0.13em;
-        text-transform: uppercase;
-        margin-bottom: 0.45rem;
-      }
-
-      h1 {
-        margin: 0;
-        font-size: clamp(1.6rem, 2.3vw, 2.2rem);
-        letter-spacing: -0.03em;
-      }
-
-      .sheet {
-        background: var(--panel);
-        border: 1px solid var(--border);
-        box-shadow: 0 12px 30px rgba(34, 70, 57, 0.08);
-        max-width: 1780px;
-        margin: 0 auto;
-        overflow: hidden;
-      }
-
-      .table-scroll {
-        overflow-x: auto;
-      }
-
-      table {
-        width: 100%;
-        min-width: 1420px;
-        border-collapse: collapse;
-        table-layout: fixed;
-      }
-
-      th,
-      td {
-        border: 1px solid #a9b4af;
-        min-width: 52px;
-        padding: 0.35rem 0.25rem;
-        text-align: center;
-        vertical-align: middle;
-      }
-
-      thead th {
-        background: var(--header);
-        color: var(--text);
-        font-weight: 600;
-      }
-
-      thead tr:first-child th {
-        height: 38px;
-      }
-
-      thead tr:last-child th {
-        background: var(--soft);
-        font-size: 0.72rem;
-        height: 26px;
-      }
-
-      .fixed-column {
-        background: var(--soft);
-        position: sticky;
-        z-index: 2;
-      }
-
-      .number-column {
-        left: 0;
-        min-width: 42px;
-        width: 42px;
-      }
-
-      .code-column {
-        left: 42px;
-        min-width: 70px;
-        width: 70px;
-      }
-
-      .name-column {
-        left: 112px;
-        min-width: 118px;
-        width: 118px;
-        text-align: left;
-      }
-
-      .student-name {
-        color: #1d2d27;
-        font-weight: 600;
-      }
-
-      .class-cell {
-        background: #f8fbf9;
-        color: #273d34;
-        font-size: 0.68rem;
-        line-height: 1.35;
-        white-space: pre-line;
-      }
-
-      .day-tuesday,
-      .day-thursday {
-        background: #f0f2f1;
-      }
-
-      .hint {
-        max-width: 1780px;
-        margin: 1rem auto 0;
-        color: var(--muted);
-        font-size: 0.78rem;
-      }
-
-      .hint strong {
-        color: var(--accent);
-      }
-
-      @media (max-width: 720px) {
-        .page {
-          padding: 1.35rem 0.75rem 2rem;
-        }
-      }
-    </style>
+    <title>Assignment 1</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <main class="page">
-      <header class="page-header">
+    <div class="page">
+      <div class="page-header">
         <div>
-          <div class="eyebrow">schedule</div>
-          <h1>SEMINAR 1</h1>
+          <p class="eyebrow">9 сарын 8 нд</p>
+          <h1>Assignment 1</h1>
         </div>
-      </header>
-
-      <section class="sheet">
+      </div>
+      <div class="sheet">
         <div class="table-scroll">
-          <table aria-label="Seminar schedule">
-            <thead>
-              <tr>
-                <th class="fixed-column number-column" rowspan="2">№</th>
-                <th class="fixed-column code-column" rowspan="2">Код</th>
-                <th class="fixed-column name-column" rowspan="2">Багшийн<br />нэр</th>
-                <th colspan="6">Даваа</th>
-                <th colspan="6">Мягмар</th>
-                <th colspan="6">Лхагва</th>
-                <th colspan="6">Пүрэв</th>
-                <th colspan="6">Баасан</th>
-              </tr>
-              <tr>
-                <th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th>
-                <th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th>
-                <th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th>
-                <th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th>
-                <th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row" class="fixed-column number-column">1</th>
-                <td class="fixed-column code-column">8020</td>
-                <th scope="row" class="fixed-column name-column student-name">Б.Тулга</th>
-                <td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td><td class="class-cell">IOI121<br />Г-Бүгд<br />C-402</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td>
-                <td class="class-cell day-tuesday">UFE<br />B-402a</td><td class="class-cell day-tuesday">UFE<br />B-402a</td><td class="class-cell day-tuesday">&nbsp;</td><td class="class-cell day-tuesday">&nbsp;</td><td class="class-cell day-tuesday">&nbsp;</td><td class="class-cell day-tuesday">&nbsp;</td>
-                <td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td>
-                <td class="class-cell day-thursday">UFE<br />B-402a</td><td class="class-cell day-thursday">UFE<br />B-402a</td><td class="class-cell day-thursday">&nbsp;</td><td class="class-cell day-thursday">&nbsp;</td><td class="class-cell day-thursday">&nbsp;</td><td class="class-cell day-thursday">&nbsp;</td>
-                <td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td>
-              </tr>
+          <div class="sheet-table">
+            <ul class="sheet-row sheet-head">
+              <li class="cell cell-fixed col-num head-fixed">№</li>
+              <li class="cell cell-fixed col-code head-fixed">Код</li>
+              <li class="cell cell-fixed col-name head-fixed">
+                Багшийн<br />нэр
+              </li>
+              <li class="cell day">Даваа</li>
+              <li class="cell day">Мягмар</li>
+              <li class="cell day">Лхагва</li>
+              <li class="cell day">Пүрэв</li>
+              <li class="cell day">Баасан</li>
+              <li class="cell period">1</li>
+              <li class="cell period">2</li>
+              <li class="cell period">3</li>
+              <li class="cell period">4</li>
+              <li class="cell period">5</li>
+              <li class="cell period">6</li>
+              <li class="cell period">1</li>
+              <li class="cell period">2</li>
+              <li class="cell period">3</li>
+              <li class="cell period">4</li>
+              <li class="cell period">5</li>
+              <li class="cell period">6</li>
+              <li class="cell period">1</li>
+              <li class="cell period">2</li>
+              <li class="cell period">3</li>
+              <li class="cell period">4</li>
+              <li class="cell period">5</li>
+              <li class="cell period">6</li>
+              <li class="cell period">1</li>
+              <li class="cell period">2</li>
+              <li class="cell period">3</li>
+              <li class="cell period">4</li>
+              <li class="cell period">5</li>
+              <li class="cell period">6</li>
+              <li class="cell period">1</li>
+              <li class="cell period">2</li>
+              <li class="cell period">3</li>
+              <li class="cell period">4</li>
+              <li class="cell period">5</li>
+              <li class="cell period">6</li>
+            </ul>
 
-              <tr>
-                <th scope="row" class="fixed-column number-column">2</th>
-                <td class="fixed-column code-column">8030</td>
-                <th scope="row" class="fixed-column name-column student-name">Б.Оргил</th>
-                <td class="class-cell">&nbsp;</td><td class="class-cell">IOI113<br />Г-Бүгд<br />C-402</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td>
-                <td class="class-cell day-tuesday">&nbsp;</td><td class="class-cell day-tuesday">&nbsp;</td><td class="class-cell day-tuesday">IOI113<br />io204<br />B-402a</td><td class="class-cell day-tuesday">IOI113<br />io204<br />B-402a</td><td class="class-cell day-tuesday">&nbsp;</td><td class="class-cell day-tuesday">&nbsp;</td>
-                <td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td>
-                <td class="class-cell day-thursday">&nbsp;</td><td class="class-cell day-thursday">&nbsp;</td><td class="class-cell day-thursday">&nbsp;</td><td class="class-cell day-thursday">&nbsp;</td><td class="class-cell day-thursday">&nbsp;</td><td class="class-cell day-thursday">&nbsp;</td>
-                <td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td>
-              </tr>
+            <ul class="sheet-row body-row">
+              <li class="cell cell-fixed col-num">1</li>
+              <li class="cell cell-fixed col-code">8020</li>
+              <li class="cell cell-fixed col-name student-name">Б.Тулга</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">IOI121<br />Г-Бүгд<br />C-402</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell day-tuesday">UFE<br />B-402a</li>
+              <li class="cell class-cell day-tuesday">UFE<br />B-402a</li>
+              <li class="cell class-cell day-tuesday">&nbsp;</li>
+              <li class="cell class-cell day-tuesday">&nbsp;</li>
+              <li class="cell class-cell day-tuesday">&nbsp;</li>
+              <li class="cell class-cell day-tuesday">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell day-thursday">UFE<br />B-402a</li>
+              <li class="cell class-cell day-thursday">UFE<br />B-402a</li>
+              <li class="cell class-cell day-thursday">&nbsp;</li>
+              <li class="cell class-cell day-thursday">&nbsp;</li>
+              <li class="cell class-cell day-thursday">&nbsp;</li>
+              <li class="cell class-cell day-thursday">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+            </ul>
 
-              <tr>
-                <th scope="row" class="fixed-column number-column">3</th>
-                <td class="fixed-column code-column">&nbsp;</td>
-                <th scope="row" class="fixed-column name-column student-name">М.Цэцэнцэнгэл</th>
-                <td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td><td class="class-cell">IOI122<br />Г-Бүгд<br />C-402</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td>
-                <td class="class-cell day-tuesday">&nbsp;</td><td class="class-cell day-tuesday">&nbsp;</td><td class="class-cell day-tuesday">&nbsp;</td><td class="class-cell day-tuesday">&nbsp;</td><td class="class-cell day-tuesday">&nbsp;</td><td class="class-cell day-tuesday">&nbsp;</td>
-                <td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td>
-                <td class="class-cell day-thursday">&nbsp;</td><td class="class-cell day-thursday">&nbsp;</td><td class="class-cell day-thursday">&nbsp;</td><td class="class-cell day-thursday">&nbsp;</td><td class="class-cell day-thursday">&nbsp;</td><td class="class-cell day-thursday">&nbsp;</td>
-                <td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td>
-              </tr>
+            <ul class="sheet-row body-row">
+              <li class="cell cell-fixed col-num">2</li>
+              <li class="cell cell-fixed col-code">8030</li>
+              <li class="cell cell-fixed col-name student-name">Б.Оргил</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">IOI113<br />Г-Бүгд<br />C-402</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell day-tuesday">&nbsp;</li>
+              <li class="cell class-cell day-tuesday">&nbsp;</li>
+              <li class="cell class-cell day-tuesday">
+                IOI113<br />io204<br />B-402a
+              </li>
+              <li class="cell class-cell day-tuesday">
+                IOI113<br />io204<br />B-402a
+              </li>
+              <li class="cell class-cell day-tuesday">&nbsp;</li>
+              <li class="cell class-cell day-tuesday">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell day-thursday">&nbsp;</li>
+              <li class="cell class-cell day-thursday">&nbsp;</li>
+              <li class="cell class-cell day-thursday">&nbsp;</li>
+              <li class="cell class-cell day-thursday">&nbsp;</li>
+              <li class="cell class-cell day-thursday">&nbsp;</li>
+              <li class="cell class-cell day-thursday">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+            </ul>
 
-              <tr>
-                <th scope="row" class="fixed-column number-column">4</th>
-                <td class="fixed-column code-column">&nbsp;</td>
-                <th scope="row" class="fixed-column name-column student-name">С.Уугандорж</th>
-                <td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td>
-                <td class="class-cell day-tuesday">&nbsp;</td><td class="class-cell day-tuesday">&nbsp;</td><td class="class-cell day-tuesday">IOI113<br />io203<br />B-402b</td><td class="class-cell day-tuesday">IOI113<br />io203<br />B-402b</td><td class="class-cell day-tuesday">&nbsp;</td><td class="class-cell day-tuesday">&nbsp;</td>
-                <td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td>
-                <td class="class-cell day-thursday">&nbsp;</td><td class="class-cell day-thursday">&nbsp;</td><td class="class-cell day-thursday">&nbsp;</td><td class="class-cell day-thursday">&nbsp;</td><td class="class-cell day-thursday">&nbsp;</td><td class="class-cell day-thursday">&nbsp;</td>
-                <td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td>
-              </tr>
+            <ul class="sheet-row body-row">
+              <li class="cell cell-fixed col-num">3</li>
+              <li class="cell cell-fixed col-code">&nbsp;</li>
+              <li class="cell cell-fixed col-name student-name">
+                М.Цэцэнцэнгэл
+              </li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">IOI122<br />Г-Бүгд<br />C-402</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell day-tuesday">&nbsp;</li>
+              <li class="cell class-cell day-tuesday">&nbsp;</li>
+              <li class="cell class-cell day-tuesday">&nbsp;</li>
+              <li class="cell class-cell day-tuesday">&nbsp;</li>
+              <li class="cell class-cell day-tuesday">&nbsp;</li>
+              <li class="cell class-cell day-tuesday">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell day-thursday">&nbsp;</li>
+              <li class="cell class-cell day-thursday">&nbsp;</li>
+              <li class="cell class-cell day-thursday">&nbsp;</li>
+              <li class="cell class-cell day-thursday">&nbsp;</li>
+              <li class="cell class-cell day-thursday">&nbsp;</li>
+              <li class="cell class-cell day-thursday">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+            </ul>
 
-              <tr>
-                <th scope="row" class="fixed-column number-column">5</th>
-                <td class="fixed-column code-column">&nbsp;</td>
-                <th scope="row" class="fixed-column name-column student-name">Л.Лхагвадорж</th>
-                <td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td>
-                <td class="class-cell day-tuesday">IOI113<br />io201<br />B-402b</td><td class="class-cell day-tuesday">IOI113<br />io201<br />B-402b</td><td class="class-cell day-tuesday">&nbsp;</td><td class="class-cell day-tuesday">&nbsp;</td><td class="class-cell day-tuesday">&nbsp;</td><td class="class-cell day-tuesday">&nbsp;</td>
-                <td class="class-cell">&nbsp;</td><td class="class-cell">IOI113<br />io202<br />B-402a</td><td class="class-cell">IOI113<br />io202<br />B-402a</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td>
-                <td class="class-cell day-thursday">&nbsp;</td><td class="class-cell day-thursday">&nbsp;</td><td class="class-cell day-thursday">&nbsp;</td><td class="class-cell day-thursday">&nbsp;</td><td class="class-cell day-thursday">&nbsp;</td><td class="class-cell day-thursday">&nbsp;</td>
-                <td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td>
-              </tr>
+            <ul class="sheet-row body-row">
+              <li class="cell cell-fixed col-num">4</li>
+              <li class="cell cell-fixed col-code">&nbsp;</li>
+              <li class="cell cell-fixed col-name student-name">С.Уугандорж</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell day-tuesday">&nbsp;</li>
+              <li class="cell class-cell day-tuesday">&nbsp;</li>
+              <li class="cell class-cell day-tuesday">
+                IOI113<br />io203<br />B-402b
+              </li>
+              <li class="cell class-cell day-tuesday">
+                IOI113<br />io203<br />B-402b
+              </li>
+              <li class="cell class-cell day-tuesday">&nbsp;</li>
+              <li class="cell class-cell day-tuesday">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell day-thursday">&nbsp;</li>
+              <li class="cell class-cell day-thursday">&nbsp;</li>
+              <li class="cell class-cell day-thursday">&nbsp;</li>
+              <li class="cell class-cell day-thursday">&nbsp;</li>
+              <li class="cell class-cell day-thursday">&nbsp;</li>
+              <li class="cell class-cell day-thursday">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+            </ul>
 
-              <tr>
-                <th scope="row" class="fixed-column number-column">6</th>
-                <td class="fixed-column code-column">8040</td>
-                <th scope="row" class="fixed-column name-column student-name">А.Мөнх-Уурал</th>
-                <td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td>
-                <td class="class-cell day-tuesday">&nbsp;</td><td class="class-cell day-tuesday">&nbsp;</td><td class="class-cell day-tuesday">&nbsp;</td><td class="class-cell day-tuesday">&nbsp;</td><td class="class-cell day-tuesday">&nbsp;</td><td class="class-cell day-tuesday">&nbsp;</td>
-                <td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td>
-                <td class="class-cell day-thursday">IOI121<br />io205<br />B-402a</td><td class="class-cell day-thursday">IOI121<br />io205<br />B-402a</td><td class="class-cell day-thursday">&nbsp;</td><td class="class-cell day-thursday">&nbsp;</td><td class="class-cell day-thursday">&nbsp;</td><td class="class-cell day-thursday">&nbsp;</td>
-                <td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td>
-              </tr>
+            <ul class="sheet-row body-row">
+              <li class="cell cell-fixed col-num">5</li>
+              <li class="cell cell-fixed col-code">&nbsp;</li>
+              <li class="cell cell-fixed col-name student-name">
+                Л.Лхагвадорж
+              </li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell day-tuesday">
+                IOI113<br />io201<br />B-402b
+              </li>
+              <li class="cell class-cell day-tuesday">
+                IOI113<br />io201<br />B-402b
+              </li>
+              <li class="cell class-cell day-tuesday">&nbsp;</li>
+              <li class="cell class-cell day-tuesday">&nbsp;</li>
+              <li class="cell class-cell day-tuesday">&nbsp;</li>
+              <li class="cell class-cell day-tuesday">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">IOI113<br />io202<br />B-402a</li>
+              <li class="cell class-cell">IOI113<br />io202<br />B-402a</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell day-thursday">&nbsp;</li>
+              <li class="cell class-cell day-thursday">&nbsp;</li>
+              <li class="cell class-cell day-thursday">&nbsp;</li>
+              <li class="cell class-cell day-thursday">&nbsp;</li>
+              <li class="cell class-cell day-thursday">&nbsp;</li>
+              <li class="cell class-cell day-thursday">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+            </ul>
 
-              <tr>
-                <th scope="row" class="fixed-column number-column">7</th>
-                <td class="fixed-column code-column">&nbsp;</td>
-                <th scope="row" class="fixed-column name-column student-name">С.Сайнбаяр</th>
-                <td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td>
-                <td class="class-cell day-tuesday">&nbsp;</td><td class="class-cell day-tuesday">&nbsp;</td><td class="class-cell day-tuesday">&nbsp;</td><td class="class-cell day-tuesday">&nbsp;</td><td class="class-cell day-tuesday">&nbsp;</td><td class="class-cell day-tuesday">&nbsp;</td>
-                <td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td>
-                <td class="class-cell day-thursday">&nbsp;</td><td class="class-cell day-thursday">&nbsp;</td><td class="class-cell day-thursday">&nbsp;</td><td class="class-cell day-thursday">&nbsp;</td><td class="class-cell day-thursday">&nbsp;</td><td class="class-cell day-thursday">&nbsp;</td>
-                <td class="class-cell">IOI121<br />io208<br />B-402a</td><td class="class-cell">IOI121<br />io208<br />B-402a</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td>
-              </tr>
+            <ul class="sheet-row body-row">
+              <li class="cell cell-fixed col-num">6</li>
+              <li class="cell cell-fixed col-code">8040</li>
+              <li class="cell cell-fixed col-name student-name">
+                А.Мөнх-Уурал
+              </li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell day-tuesday">&nbsp;</li>
+              <li class="cell class-cell day-tuesday">&nbsp;</li>
+              <li class="cell class-cell day-tuesday">&nbsp;</li>
+              <li class="cell class-cell day-tuesday">&nbsp;</li>
+              <li class="cell class-cell day-tuesday">&nbsp;</li>
+              <li class="cell class-cell day-tuesday">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell day-thursday">
+                IOI121<br />io205<br />B-402a
+              </li>
+              <li class="cell class-cell day-thursday">
+                IOI121<br />io205<br />B-402a
+              </li>
+              <li class="cell class-cell day-thursday">&nbsp;</li>
+              <li class="cell class-cell day-thursday">&nbsp;</li>
+              <li class="cell class-cell day-thursday">&nbsp;</li>
+              <li class="cell class-cell day-thursday">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+            </ul>
 
-              <tr>
-                <th scope="row" class="fixed-column number-column">8</th>
-                <td class="fixed-column code-column">&nbsp;</td>
-                <th scope="row" class="fixed-column name-column student-name">Б.Удвал</th>
-                <td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td>
-                <td class="class-cell day-tuesday">&nbsp;</td><td class="class-cell day-tuesday">&nbsp;</td><td class="class-cell day-tuesday">&nbsp;</td><td class="class-cell day-tuesday">&nbsp;</td><td class="class-cell day-tuesday">&nbsp;</td><td class="class-cell day-tuesday">&nbsp;</td>
-                <td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td>
-                <td class="class-cell day-thursday">&nbsp;</td><td class="class-cell day-thursday">&nbsp;</td><td class="class-cell day-thursday">&nbsp;</td><td class="class-cell day-thursday">&nbsp;</td><td class="class-cell day-thursday">&nbsp;</td><td class="class-cell day-thursday">&nbsp;</td>
-                <td class="class-cell">IOI121<br />io206<br />B-402b</td><td class="class-cell">IOI121<br />io206<br />B-402b</td><td class="class-cell">IOI121<br />io207<br />B-402b</td><td class="class-cell">IOI121<br />io207<br />B-402b</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td>
-              </tr>
+            <ul class="sheet-row body-row">
+              <li class="cell cell-fixed col-num">7</li>
+              <li class="cell cell-fixed col-code">&nbsp;</li>
+              <li class="cell cell-fixed col-name student-name">С.Сайнбаяр</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell day-tuesday">&nbsp;</li>
+              <li class="cell class-cell day-tuesday">&nbsp;</li>
+              <li class="cell class-cell day-tuesday">&nbsp;</li>
+              <li class="cell class-cell day-tuesday">&nbsp;</li>
+              <li class="cell class-cell day-tuesday">&nbsp;</li>
+              <li class="cell class-cell day-tuesday">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell day-thursday">&nbsp;</li>
+              <li class="cell class-cell day-thursday">&nbsp;</li>
+              <li class="cell class-cell day-thursday">&nbsp;</li>
+              <li class="cell class-cell day-thursday">&nbsp;</li>
+              <li class="cell class-cell day-thursday">&nbsp;</li>
+              <li class="cell class-cell day-thursday">&nbsp;</li>
+              <li class="cell class-cell">IOI121<br />io208<br />B-402a</li>
+              <li class="cell class-cell">IOI121<br />io208<br />B-402a</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+            </ul>
 
-              <tr>
-                <th scope="row" class="fixed-column number-column">9</th>
-                <td class="fixed-column code-column">&nbsp;</td>
-                <th scope="row" class="fixed-column name-column student-name">Х.Түмэнхүсэлэн</th>
-                <td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td>
-                <td class="class-cell day-tuesday">&nbsp;</td><td class="class-cell day-tuesday">&nbsp;</td><td class="class-cell day-tuesday">IOI122<br />io209<br />B-402b</td><td class="class-cell day-tuesday">IOI122<br />io209<br />B-402b</td><td class="class-cell day-tuesday">&nbsp;</td><td class="class-cell day-tuesday">&nbsp;</td>
-                <td class="class-cell">IOI122<br />io212<br />B-402b</td><td class="class-cell">IOI122<br />io212<br />B-402b</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td>
-                <td class="class-cell day-thursday">&nbsp;</td><td class="class-cell day-thursday">&nbsp;</td><td class="class-cell day-thursday">&nbsp;</td><td class="class-cell day-thursday">&nbsp;</td><td class="class-cell day-thursday">&nbsp;</td><td class="class-cell day-thursday">&nbsp;</td>
-                <td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td>
-              </tr>
+            <ul class="sheet-row body-row">
+              <li class="cell cell-fixed col-num">8</li>
+              <li class="cell cell-fixed col-code">&nbsp;</li>
+              <li class="cell cell-fixed col-name student-name">Б.Удвал</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell day-tuesday">&nbsp;</li>
+              <li class="cell class-cell day-tuesday">&nbsp;</li>
+              <li class="cell class-cell day-tuesday">&nbsp;</li>
+              <li class="cell class-cell day-tuesday">&nbsp;</li>
+              <li class="cell class-cell day-tuesday">&nbsp;</li>
+              <li class="cell class-cell day-tuesday">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell day-thursday">&nbsp;</li>
+              <li class="cell class-cell day-thursday">&nbsp;</li>
+              <li class="cell class-cell day-thursday">&nbsp;</li>
+              <li class="cell class-cell day-thursday">&nbsp;</li>
+              <li class="cell class-cell day-thursday">&nbsp;</li>
+              <li class="cell class-cell day-thursday">&nbsp;</li>
+              <li class="cell class-cell">IOI121<br />io206<br />B-402b</li>
+              <li class="cell class-cell">IOI121<br />io206<br />B-402b</li>
+              <li class="cell class-cell">IOI121<br />io207<br />B-402b</li>
+              <li class="cell class-cell">IOI121<br />io207<br />B-402b</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+            </ul>
 
-              <tr>
-                <th scope="row" class="fixed-column number-column">10</th>
-                <td class="fixed-column code-column">&nbsp;</td>
-                <th scope="row" class="fixed-column name-column student-name">Д.Төмөрчөдөр</th>
-                <td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td>
-                <td class="class-cell day-tuesday">&nbsp;</td><td class="class-cell day-tuesday">&nbsp;</td><td class="class-cell day-tuesday">&nbsp;</td><td class="class-cell day-tuesday">&nbsp;</td><td class="class-cell day-tuesday">&nbsp;</td><td class="class-cell day-tuesday">&nbsp;</td>
-                <td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td>
-                <td class="class-cell day-thursday">IOI122<br />io210<br />B-402b</td><td class="class-cell day-thursday">IOI122<br />io210<br />B-402b</td><td class="class-cell day-thursday">IOI122<br />io211<br />B-402b</td><td class="class-cell day-thursday">IOI122<br />io211<br />B-402b</td><td class="class-cell day-thursday">&nbsp;</td><td class="class-cell day-thursday">&nbsp;</td>
-                <td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td><td class="class-cell">&nbsp;</td>
-              </tr>
-            </tbody>
-          </table>
+            <ul class="sheet-row body-row">
+              <li class="cell cell-fixed col-num">9</li>
+              <li class="cell cell-fixed col-code">&nbsp;</li>
+              <li class="cell cell-fixed col-name student-name">
+                Х.Түмэнхүсэлэн
+              </li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell day-tuesday">&nbsp;</li>
+              <li class="cell class-cell day-tuesday">&nbsp;</li>
+              <li class="cell class-cell day-tuesday">
+                IOI122<br />io209<br />B-402b
+              </li>
+              <li class="cell class-cell day-tuesday">
+                IOI122<br />io209<br />B-402b
+              </li>
+              <li class="cell class-cell day-tuesday">&nbsp;</li>
+              <li class="cell class-cell day-tuesday">&nbsp;</li>
+              <li class="cell class-cell">IOI122<br />io212<br />B-402b</li>
+              <li class="cell class-cell">IOI122<br />io212<br />B-402b</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell day-thursday">&nbsp;</li>
+              <li class="cell class-cell day-thursday">&nbsp;</li>
+              <li class="cell class-cell day-thursday">&nbsp;</li>
+              <li class="cell class-cell day-thursday">&nbsp;</li>
+              <li class="cell class-cell day-thursday">&nbsp;</li>
+              <li class="cell class-cell day-thursday">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+            </ul>
+
+            <ul class="sheet-row body-row">
+              <li class="cell cell-fixed col-num">10</li>
+              <li class="cell cell-fixed col-code">&nbsp;</li>
+              <li class="cell cell-fixed col-name student-name">
+                Д.Төмөрчөдөр
+              </li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell day-tuesday">&nbsp;</li>
+              <li class="cell class-cell day-tuesday">&nbsp;</li>
+              <li class="cell class-cell day-tuesday">&nbsp;</li>
+              <li class="cell class-cell day-tuesday">&nbsp;</li>
+              <li class="cell class-cell day-tuesday">&nbsp;</li>
+              <li class="cell class-cell day-tuesday">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell day-thursday">
+                IOI122<br />io210<br />B-402b
+              </li>
+              <li class="cell class-cell day-thursday">
+                IOI122<br />io210<br />B-402b
+              </li>
+              <li class="cell class-cell day-thursday">
+                IOI122<br />io211<br />B-402b
+              </li>
+              <li class="cell class-cell day-thursday">
+                IOI122<br />io211<br />B-402b
+              </li>
+              <li class="cell class-cell day-thursday">&nbsp;</li>
+              <li class="cell class-cell day-thursday">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+            </ul>
+          </div>
         </div>
-      </section>
+      </div>
+      <div class="sheet">
+        <div class="table-scroll">
+          <div class="sheet-table">
+            <ul class="sheet-row sheet-head">
+              <li class="cell cell-fixed col-num head-fixed">№</li>
+              <li class="cell cell-fixed col-code head-fixed">Код</li>
+              <li class="cell cell-fixed col-name head-fixed">
+                Багшийн<br />нэр
+              </li>
+              <li class="cell day">Даваа</li>
+              <li class="cell day">Мягмар</li>
+              <li class="cell day">Лхагва</li>
+              <li class="cell day">Пүрэв</li>
+              <li class="cell day">Баасан</li>
+              <li class="cell period">1</li>
+              <li class="cell period">2</li>
+              <li class="cell period">3</li>
+              <li class="cell period">4</li>
+              <li class="cell period">5</li>
+              <li class="cell period">6</li>
+              <li class="cell period">1</li>
+              <li class="cell period">2</li>
+              <li class="cell period">3</li>
+              <li class="cell period">4</li>
+              <li class="cell period">5</li>
+              <li class="cell period">6</li>
+              <li class="cell period">1</li>
+              <li class="cell period">2</li>
+              <li class="cell period">3</li>
+              <li class="cell period">4</li>
+              <li class="cell period">5</li>
+              <li class="cell period">6</li>
+              <li class="cell period">1</li>
+              <li class="cell period">2</li>
+              <li class="cell period">3</li>
+              <li class="cell period">4</li>
+              <li class="cell period">5</li>
+              <li class="cell period">6</li>
+              <li class="cell period">1</li>
+              <li class="cell period">2</li>
+              <li class="cell period">3</li>
+              <li class="cell period">4</li>
+              <li class="cell period">5</li>
+              <li class="cell period">6</li>
+            </ul>
 
-      <p class="hint"><strong>0</strong> оюутан · Хичээлийн хуваарь</p>
-    </main>
+            <ul class="sheet-row body-row">
+              <li class="cell cell-fixed col-num">1</li>
+              <li class="cell cell-fixed col-code">8020</li>
+              <li class="cell cell-fixed col-name student-name">Б.Тулга</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">IOI121<br />Г-Бүгд<br />C-402</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell day-tuesday">UFE<br />B-402a</li>
+              <li class="cell class-cell day-tuesday">UFE<br />B-402a</li>
+              <li class="cell class-cell day-tuesday">&nbsp;</li>
+              <li class="cell class-cell day-tuesday">&nbsp;</li>
+              <li class="cell class-cell day-tuesday">&nbsp;</li>
+              <li class="cell class-cell day-tuesday">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell day-thursday">UFE<br />B-402a</li>
+              <li class="cell class-cell day-thursday">UFE<br />B-402a</li>
+              <li class="cell class-cell day-thursday">&nbsp;</li>
+              <li class="cell class-cell day-thursday">&nbsp;</li>
+              <li class="cell class-cell day-thursday">&nbsp;</li>
+              <li class="cell class-cell day-thursday">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+            </ul>
+
+            <ul class="sheet-row body-row">
+              <li class="cell cell-fixed col-num">2</li>
+              <li class="cell cell-fixed col-code">8030</li>
+              <li class="cell cell-fixed col-name student-name">Б.Оргил</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">IOI113<br />Г-Бүгд<br />C-402</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell day-tuesday">&nbsp;</li>
+              <li class="cell class-cell day-tuesday">&nbsp;</li>
+              <li class="cell class-cell day-tuesday">
+                IOI113<br />io204<br />B-402a
+              </li>
+              <li class="cell class-cell day-tuesday">
+                IOI113<br />io204<br />B-402a
+              </li>
+              <li class="cell class-cell day-tuesday">&nbsp;</li>
+              <li class="cell class-cell day-tuesday">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell day-thursday">&nbsp;</li>
+              <li class="cell class-cell day-thursday">&nbsp;</li>
+              <li class="cell class-cell day-thursday">&nbsp;</li>
+              <li class="cell class-cell day-thursday">&nbsp;</li>
+              <li class="cell class-cell day-thursday">&nbsp;</li>
+              <li class="cell class-cell day-thursday">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+            </ul>
+
+            <ul class="sheet-row body-row">
+              <li class="cell cell-fixed col-num">3</li>
+              <li class="cell cell-fixed col-code">&nbsp;</li>
+              <li class="cell cell-fixed col-name student-name">
+                М.Цэцэнцэнгэл
+              </li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">IOI122<br />Г-Бүгд<br />C-402</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell day-tuesday">&nbsp;</li>
+              <li class="cell class-cell day-tuesday">&nbsp;</li>
+              <li class="cell class-cell day-tuesday">&nbsp;</li>
+              <li class="cell class-cell day-tuesday">&nbsp;</li>
+              <li class="cell class-cell day-tuesday">&nbsp;</li>
+              <li class="cell class-cell day-tuesday">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell day-thursday">&nbsp;</li>
+              <li class="cell class-cell day-thursday">&nbsp;</li>
+              <li class="cell class-cell day-thursday">&nbsp;</li>
+              <li class="cell class-cell day-thursday">&nbsp;</li>
+              <li class="cell class-cell day-thursday">&nbsp;</li>
+              <li class="cell class-cell day-thursday">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+            </ul>
+
+            <ul class="sheet-row body-row">
+              <li class="cell cell-fixed col-num">4</li>
+              <li class="cell cell-fixed col-code">&nbsp;</li>
+              <li class="cell cell-fixed col-name student-name">С.Уугандорж</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell day-tuesday">&nbsp;</li>
+              <li class="cell class-cell day-tuesday">&nbsp;</li>
+              <li class="cell class-cell day-tuesday">
+                IOI113<br />io203<br />B-402b
+              </li>
+              <li class="cell class-cell day-tuesday">
+                IOI113<br />io203<br />B-402b
+              </li>
+              <li class="cell class-cell day-tuesday">&nbsp;</li>
+              <li class="cell class-cell day-tuesday">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell day-thursday">&nbsp;</li>
+              <li class="cell class-cell day-thursday">&nbsp;</li>
+              <li class="cell class-cell day-thursday">&nbsp;</li>
+              <li class="cell class-cell day-thursday">&nbsp;</li>
+              <li class="cell class-cell day-thursday">&nbsp;</li>
+              <li class="cell class-cell day-thursday">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+            </ul>
+
+            <ul class="sheet-row body-row">
+              <li class="cell cell-fixed col-num">5</li>
+              <li class="cell cell-fixed col-code">&nbsp;</li>
+              <li class="cell cell-fixed col-name student-name">
+                Л.Лхагвадорж
+              </li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell day-tuesday">
+                IOI113<br />io201<br />B-402b
+              </li>
+              <li class="cell class-cell day-tuesday">
+                IOI113<br />io201<br />B-402b
+              </li>
+              <li class="cell class-cell day-tuesday">&nbsp;</li>
+              <li class="cell class-cell day-tuesday">&nbsp;</li>
+              <li class="cell class-cell day-tuesday">&nbsp;</li>
+              <li class="cell class-cell day-tuesday">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">IOI113<br />io202<br />B-402a</li>
+              <li class="cell class-cell">IOI113<br />io202<br />B-402a</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell day-thursday">&nbsp;</li>
+              <li class="cell class-cell day-thursday">&nbsp;</li>
+              <li class="cell class-cell day-thursday">&nbsp;</li>
+              <li class="cell class-cell day-thursday">&nbsp;</li>
+              <li class="cell class-cell day-thursday">&nbsp;</li>
+              <li class="cell class-cell day-thursday">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+            </ul>
+
+            <ul class="sheet-row body-row">
+              <li class="cell cell-fixed col-num">6</li>
+              <li class="cell cell-fixed col-code">8040</li>
+              <li class="cell cell-fixed col-name student-name">
+                А.Мөнх-Уурал
+              </li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell day-tuesday">&nbsp;</li>
+              <li class="cell class-cell day-tuesday">&nbsp;</li>
+              <li class="cell class-cell day-tuesday">&nbsp;</li>
+              <li class="cell class-cell day-tuesday">&nbsp;</li>
+              <li class="cell class-cell day-tuesday">&nbsp;</li>
+              <li class="cell class-cell day-tuesday">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell day-thursday">
+                IOI121<br />io205<br />B-402a
+              </li>
+              <li class="cell class-cell day-thursday">
+                IOI121<br />io205<br />B-402a
+              </li>
+              <li class="cell class-cell day-thursday">&nbsp;</li>
+              <li class="cell class-cell day-thursday">&nbsp;</li>
+              <li class="cell class-cell day-thursday">&nbsp;</li>
+              <li class="cell class-cell day-thursday">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+            </ul>
+
+            <ul class="sheet-row body-row">
+              <li class="cell cell-fixed col-num">7</li>
+              <li class="cell cell-fixed col-code">&nbsp;</li>
+              <li class="cell cell-fixed col-name student-name">С.Сайнбаяр</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell day-tuesday">&nbsp;</li>
+              <li class="cell class-cell day-tuesday">&nbsp;</li>
+              <li class="cell class-cell day-tuesday">&nbsp;</li>
+              <li class="cell class-cell day-tuesday">&nbsp;</li>
+              <li class="cell class-cell day-tuesday">&nbsp;</li>
+              <li class="cell class-cell day-tuesday">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell day-thursday">&nbsp;</li>
+              <li class="cell class-cell day-thursday">&nbsp;</li>
+              <li class="cell class-cell day-thursday">&nbsp;</li>
+              <li class="cell class-cell day-thursday">&nbsp;</li>
+              <li class="cell class-cell day-thursday">&nbsp;</li>
+              <li class="cell class-cell day-thursday">&nbsp;</li>
+              <li class="cell class-cell">IOI121<br />io208<br />B-402a</li>
+              <li class="cell class-cell">IOI121<br />io208<br />B-402a</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+            </ul>
+
+            <ul class="sheet-row body-row">
+              <li class="cell cell-fixed col-num">8</li>
+              <li class="cell cell-fixed col-code">&nbsp;</li>
+              <li class="cell cell-fixed col-name student-name">Б.Удвал</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell day-tuesday">&nbsp;</li>
+              <li class="cell class-cell day-tuesday">&nbsp;</li>
+              <li class="cell class-cell day-tuesday">&nbsp;</li>
+              <li class="cell class-cell day-tuesday">&nbsp;</li>
+              <li class="cell class-cell day-tuesday">&nbsp;</li>
+              <li class="cell class-cell day-tuesday">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell day-thursday">&nbsp;</li>
+              <li class="cell class-cell day-thursday">&nbsp;</li>
+              <li class="cell class-cell day-thursday">&nbsp;</li>
+              <li class="cell class-cell day-thursday">&nbsp;</li>
+              <li class="cell class-cell day-thursday">&nbsp;</li>
+              <li class="cell class-cell day-thursday">&nbsp;</li>
+              <li class="cell class-cell">IOI121<br />io206<br />B-402b</li>
+              <li class="cell class-cell">IOI121<br />io206<br />B-402b</li>
+              <li class="cell class-cell">IOI121<br />io207<br />B-402b</li>
+              <li class="cell class-cell">IOI121<br />io207<br />B-402b</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+            </ul>
+
+            <ul class="sheet-row body-row">
+              <li class="cell cell-fixed col-num">9</li>
+              <li class="cell cell-fixed col-code">&nbsp;</li>
+              <li class="cell cell-fixed col-name student-name">
+                Х.Түмэнхүсэлэн
+              </li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell day-tuesday">&nbsp;</li>
+              <li class="cell class-cell day-tuesday">&nbsp;</li>
+              <li class="cell class-cell day-tuesday">
+                IOI122<br />io209<br />B-402b
+              </li>
+              <li class="cell class-cell day-tuesday">
+                IOI122<br />io209<br />B-402b
+              </li>
+              <li class="cell class-cell day-tuesday">&nbsp;</li>
+              <li class="cell class-cell day-tuesday">&nbsp;</li>
+              <li class="cell class-cell">IOI122<br />io212<br />B-402b</li>
+              <li class="cell class-cell">IOI122<br />io212<br />B-402b</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell day-thursday">&nbsp;</li>
+              <li class="cell class-cell day-thursday">&nbsp;</li>
+              <li class="cell class-cell day-thursday">&nbsp;</li>
+              <li class="cell class-cell day-thursday">&nbsp;</li>
+              <li class="cell class-cell day-thursday">&nbsp;</li>
+              <li class="cell class-cell day-thursday">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+            </ul>
+
+            <ul class="sheet-row body-row">
+              <li class="cell cell-fixed col-num">10</li>
+              <li class="cell cell-fixed col-code">&nbsp;</li>
+              <li class="cell cell-fixed col-name student-name">
+                Д.Төмөрчөдөр
+              </li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell day-tuesday">&nbsp;</li>
+              <li class="cell class-cell day-tuesday">&nbsp;</li>
+              <li class="cell class-cell day-tuesday">&nbsp;</li>
+              <li class="cell class-cell day-tuesday">&nbsp;</li>
+              <li class="cell class-cell day-tuesday">&nbsp;</li>
+              <li class="cell class-cell day-tuesday">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell day-thursday">
+                IOI122<br />io210<br />B-402b
+              </li>
+              <li class="cell class-cell day-thursday">
+                IOI122<br />io210<br />B-402b
+              </li>
+              <li class="cell class-cell day-thursday">
+                IOI122<br />io211<br />B-402b
+              </li>
+              <li class="cell class-cell day-thursday">
+                IOI122<br />io211<br />B-402b
+              </li>
+              <li class="cell class-cell day-thursday">&nbsp;</li>
+              <li class="cell class-cell day-thursday">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+              <li class="cell class-cell">&nbsp;</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
