@@ -1,6 +1,5 @@
 :root {
   --bg: #edf3f0;
-  --panel: #ffffff;
   --border: #c9d4ce;
   --header: #e1e8e4;
   --soft: #f1f4f2;
@@ -46,105 +45,91 @@ h1 {
   letter-spacing: -0.03em;
 }
 
+/* the white card around the sheet, scrolls sideways on small screens */
 .sheet {
-  background: var(--panel);
+  background: #fff;
   border: 1px solid var(--border);
   box-shadow: 0 12px 30px rgba(34, 70, 57, 0.08);
   max-width: 1780px;
   margin: 0 auto;
-  overflow: hidden;
-}
-
-.table-scroll {
   overflow-x: auto;
 }
 
-/* The sheet grid: every row is a ul, every cell is a li */
-.sheet-table {
-  min-width: 1420px;
-  border-top: 1px solid #a9b4af;
-  border-left: 1px solid #a9b4af;
-}
-
-.sheet-row {
+/* every row is one grid: 3 fixed columns + 30 period columns */
+.row {
   display: grid;
   grid-template-columns: 42px 70px 118px repeat(30, 1fr);
-  list-style: none;
   min-width: 1420px;
+  list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.cell {
+.row li {
   border-right: 1px solid #a9b4af;
   border-bottom: 1px solid #a9b4af;
-  padding: 0.35rem 0.25rem;
+  min-height: 56px;
+  padding: 4px 2px;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+  font-size: 11px;
 }
 
-/* Header row: day names and period numbers */
-.sheet-head .cell {
-  background: var(--header);
-  font-weight: 600;
-  min-height: 38px;
-}
-
-.sheet-head .day {
+/* header: day names take 6 columns */
+.day {
   grid-column: span 6;
+  min-height: 38px;
+  background: var(--header);
+  font-size: 13px;
+  font-weight: bold;
 }
 
-.sheet-head .period {
-  background: var(--soft);
-  font-size: 0.72rem;
-  font-weight: 400;
+/* header: the small 1-6 period numbers */
+.p {
   min-height: 26px;
+  background: var(--soft);
+  font-size: 12px;
 }
 
-.sheet-head .head-fixed {
+/* header: № Код Багшийн нэр take 2 rows */
+.big {
   grid-row: span 2;
   background: var(--soft);
-  z-index: 4;
+  font-size: 13px;
+  font-weight: bold;
 }
 
-/* Sticky left columns stay visible while scrolling sideways */
-.cell-fixed {
+/* left 3 columns stay visible when scrolling sideways */
+.num {
   position: sticky;
+  left: 0;
   z-index: 2;
   background: var(--soft);
 }
 
-.col-num {
-  left: 0;
-}
-
-.col-code {
+.code {
+  position: sticky;
   left: 42px;
+  z-index: 2;
+  background: var(--soft);
 }
 
-.col-name {
+.name {
+  position: sticky;
   left: 112px;
+  z-index: 2;
+  background: var(--soft);
+  font-weight: 600;
   justify-content: flex-start;
   text-align: left;
+  padding-left: 8px;
 }
 
-/* Body rows */
-.class-cell {
-  background: #f8fbf9;
-  color: #273d34;
-  font-size: 0.68rem;
-  line-height: 1.35;
-}
-
-.student-name {
-  color: #1d2d27;
-  font-weight: 600;
-}
-
-.day-tuesday,
-.day-thursday {
+/* tuesday and thursday columns are gray */
+.tue,
+.thu {
   background: #f0f2f1;
 }
 
@@ -157,77 +142,6 @@ h1 {
 
 .hint span {
   color: var(--accent);
-}
-
-/* ===== NEW VERSION: sheet built COLUMN FIRST with grid =====
-   .sheet-columns places the 3 fixed columns + 5 day groups side
-   by side. Every column is a ul and uses the same row template,
-   so the rows line up across all columns. */
-.sheet-columns {
-  display: grid;
-  grid-template-columns: 42px 70px 118px repeat(5, 1fr);
-  min-width: 1420px;
-  border-top: 1px solid #a9b4af;
-  border-left: 1px solid #a9b4af;
-}
-
-.sheet-columns .col {
-  display: grid;
-  grid-template-rows: 38px 26px repeat(10, 40px);
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.head-cell {
-  grid-row: 1 / 3;
-  font-weight: 600;
-  background: var(--soft);
-}
-
-.col-num,
-.col-code,
-.col-name {
-  position: sticky;
-  z-index: 2;
-  background: var(--soft);
-}
-
-.col-num {
-  left: 0;
-}
-
-.col-code {
-  left: 42px;
-}
-
-.col-name {
-  left: 112px;
-}
-
-.col-name .cell {
-  justify-content: flex-start;
-  text-align: left;
-}
-
-.day-group {
-  display: grid;
-  grid-template-rows: 38px auto;
-}
-
-.day-title {
-  margin: 0;
-  background: var(--header);
-  font-weight: 600;
-}
-
-.day-cols {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-}
-
-.day-cols .col {
-  grid-template-rows: 26px repeat(10, 40px);
 }
 
 @media (max-width: 720px) {

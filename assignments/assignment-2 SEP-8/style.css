@@ -49,11 +49,12 @@ h1 {
 .sheet {
   background: var(--panel);
   border: 1px solid var(--border);
+  border-radius: 14px;
   box-shadow: 0 12px 30px rgba(34, 70, 57, 0.08);
   overflow: hidden;
 }
 
-.row {
+.user-row {
   display: grid;
   grid-template-columns: 64px 140px 1fr 1.3fr;
   list-style: none;
@@ -70,17 +71,17 @@ h1 {
   text-align: center;
 }
 
-.row:last-child .cell {
+.user-row:last-child .cell {
   border-bottom: none;
 }
 
-.row-head .cell {
+.user-head .cell {
   background: var(--header);
   font-weight: 600;
   min-height: 44px;
 }
 
-.row:not(.row-head):hover {
+.user-row:not(.user-head):hover {
   background: #f8fbf9;
 }
 
@@ -99,16 +100,15 @@ h1 {
   background: var(--soft);
 }
 
-.name {
-  justify-content: flex-start;
-  text-align: left;
-  font-weight: 600;
-  color: #1d2d27;
-}
-
+.name,
 .hobbies {
   justify-content: flex-start;
   text-align: left;
+}
+
+.name {
+  font-weight: 600;
+  color: #1d2d27;
 }
 
 .hobby-list {
@@ -119,18 +119,12 @@ h1 {
   color: #273d34;
 }
 
-.hint {
-  margin-top: 1rem;
-  color: var(--muted);
-  font-size: 0.78rem;
-}
-
 @media (max-width: 720px) {
   .page {
     padding: 1.35rem 0.75rem 2rem;
   }
 
-  .row {
+  .user-row {
     grid-template-columns: 44px 92px 1fr 1.2fr;
   }
 
