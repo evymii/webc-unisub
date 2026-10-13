@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab 3 - CSS Properties</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- 1. CSS MARGIN
+         Margin is the space OUTSIDE an element's border.
+         It pushes other elements away. Can set top, right, bottom, left separately. -->
+    <section id="margin">
+      <h1>CSS Margin</h1>
+      <div class="box margin-example">Margin Example</div>
+      <p>
+        The green box has margin applied to create space outside its border.
+      </p>
+    </section>
+
+    <!-- ============================================
+         2. CSS PADDING
+         Padding is the space INSIDE an element, between its content and border.
+         It increases the space between content and border edge.
+         ============================================ -->
+    <section id="padding">
+      <h1>CSS Padding</h1>
+      <div class="box padding-example">Padding Example</div>
+      <p>
+        The blue box has padding inside, pushing content away from the border.
+      </p>
+    </section>
+
+    <!-- ============================================
+         3. CSS ALIGN
+         CSS align properties control horizontal and vertical positioning.
+         text-align: horizontal text alignment (left, center, right).
+         margin: auto: centers block elements horizontally.
+         ============================================ -->
+    <section id="align">
+      <h1>CSS Align</h1>
+      <div class="box align-example">Centered Box</div>
+      <p>The box above is centered using margin: auto and text-align.</p>
+    </section>
+
+    <!-- ============================================
+         4. CSS BORDER & OUTLINE
+         Border: surrounds content and padding, part of element dimensions.
+         Outline: drawn OUTSIDE the border, does NOT affect element size.
+         Used for focus states and visual emphasis.
+         ============================================ -->
+    <section id="border-outline">
+      <h1>CSS Border &amp; Outline</h1>
+      <div class="box border-example">Border Box</div>
+      <div class="box outline-example">Outline Box</div>
+      <p>
+        Border is part of element size; outline is drawn outside and doesn't
+        affect layout.
+      </p>
+    </section>
+
+    <!-- ============================================
+         5. CSS OPACITY
+         Opacity sets the transparency level of an element (0.0 to 1.0).
+         0.0 = fully transparent, 1.0 = fully opaque.
+         Affects the element AND all its children.
+         ============================================ -->
+    <section id="opacity">
+      <h1>CSS Opacity</h1>
+      <div class="box opacity-example">Transparent Box</div>
+      <p>The box above has opacity set to 0.5, making it semi-transparent.</p>
+    </section>
+
+    <!-- ============================================
+         6. CSS !important
+         !important overrides all other CSS rules for a property.
+         Use sparingly - it breaks normal CSS specificity cascade.
+         Highest priority in CSS rule resolution.
+         ============================================ -->
+    <section id="important">
+      <h1>CSS !important</h1>
+      <div class="box important-example">Important Box</div>
+      <p>The red color uses !important to override other conflicting rules.</p>
+    </section>
+  </body>
+</html>
